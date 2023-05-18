@@ -1,10 +1,8 @@
 if exist('time','var')==0 %%% time mar a matlab-ban letrehozott ido ami az abszolut "t" meresbeli ido offset-el verzioja
-  time=t-(t(1));            %%% ha olyan kezelt merest toltunk be amiben tortent tordeles, akkor ott mar ezek aszerint letre lesznek hozva
-  v_ebc2_filt=filloutliers(MeanFASpeed_EBC2_CAN7,0,'mean');     
+time=t-(t(1));            %%% ha olyan kezelt merest toltunk be amiben tortent tordeles, akkor ott mar ezek aszerint letre lesznek hozva
+v_ebc2_filt=filloutliers(MeanFASpeed_EBC2_CAN7,0,'mean');     
+
 end
-
-time=time-(time(1));
-
 
 % win_WSS_ciklus_elements=5:5:50; % VT 10 30 50
 % win_WSS_ciklus_elements=[2 6 16];
@@ -24,7 +22,7 @@ win_Tf2_ciklus_length=length(win_Tf2_ciklus_elements);
 
 
             a_begin=0;            %%% a_begin=0;
-            a_lepes=0.3/20;          %%% a_lepes=0.3;
+            a_lepes=0.3/20*2;          %%% a_lepes=0.3;
             a_db=30;              %%% a_db=30;
             b_begin=0;            %%% b_begin=0;
             b_lepes=5/20;            %%% b_lepes=5;
@@ -257,7 +255,7 @@ T_WSS_smooth=ablak(T_WSS_A2,win_WSS);
                 end
     end
    %filename_error_mtx_tolig=sprintf('%d_%d',win_WSS(1),win_WSS_ciklus_elements(win_WSS_ciklus_idx));   
-   filenev=sprintf('error_matrix_%02d_%02d_%02d_win_WSS_%03d_%03d',day(datetime),hour(datetime),minute(datetime),win_WSS(1),win_WSS_ciklus_elements(1),win_WSS_ciklus_elements(win_WSS_ciklus_idx));
+   filenev=sprintf('error_matrix_%02d_%02d_%02d_win_WSS_%03d_%03d',day(datetime),hour(datetime),minute(datetime),win_WSS_ciklus_elements(1),win_WSS_ciklus_elements(win_WSS_ciklus_idx));
    save(filenev,'error_matrix');
    
    filenev_RMS=sprintf('RMS_error_matrix_%02d_%02d_%02d_win_WSS_%03d_%03d',day(datetime),hour(datetime),minute(datetime),win_WSS_ciklus_elements(1),win_WSS_ciklus_elements(win_WSS_ciklus_idx));
