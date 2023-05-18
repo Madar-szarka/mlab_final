@@ -1,0 +1,3 @@
+Ha main agon vagy es bizonytalan a valtozastatas akkor a drag and drop utan jelold be hogy csinaljon mellekagat.
+    utana ha merge-t akarsz akkor a felso sorban a pull requestnel nyomj ra egy ki tudod valasztani hogy mit mivel compare-elsz. ott nem érdemes compare-elni hanem csak fogadd el es akkor a mellekag kerul be egy az egyben
+Ha egy regebbi pontra akarsz visszamenni akkor a faban valaszd ki a pontot, kattints ra es utana odaugrik. Ekkor nem tudod szerkeszteni hanem letre kell hozni egy mellekagat. ezt ugy tudod megtenni ha az ág szűrőbe elkezded beirni amit nevet akarsz neki es alul megjelenik a + gomb hogy ilyen nevvel hozza létre. Utana ebbe az agba tudsz dolgozni amit majd késobb tudsz merge-elni pull requstel
