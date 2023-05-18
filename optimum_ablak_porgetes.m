@@ -160,7 +160,7 @@ T_WSS_smooth=ablak(T_WSS_A2,win_WSS);
                         
                         difff=max(abs(Tf_n1_smoother-T_Brake_disc_A2(2:end)));
                         diff_matrix(aa,bb,cc,win_WSS_ciklus_idx,win_Tf2_ciklus_idx)=difff;
-                        MAE=mean(abs(Tf_n1_smoother-T_Brake_disc_A2(2:end))); %%% Mean Absolute Error
+                        MAE=sum(abs(Tf_n1_smoother-T_Brake_disc_A2(2:end)))/(length(time)-1); %%% Mean Absolute Error
                         MAE_matrix(aa,bb,cc,win_WSS_ciklus_idx,win_Tf2_ciklus_idx)=MAE;
                         
                         if sum(error) < min_error
