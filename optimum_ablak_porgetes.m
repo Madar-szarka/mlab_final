@@ -4,8 +4,8 @@ v_ebc2_filt=filloutliers(MeanFASpeed_EBC2_CAN7,0,'mean');
 
 end
 
-% win_WSS_ciklus_elements=5:5:50; % VT 10 30 50
-% win_WSS_ciklus_elements=[2 6 16];
+% win_lements=5:5:50; % VT 10 30 50
+2ndpointbol mellekag
 %win_WSS_ciklus_elements=[10 30 60];
  win_WSS_ciklus_elements=10:10:100; 
 
